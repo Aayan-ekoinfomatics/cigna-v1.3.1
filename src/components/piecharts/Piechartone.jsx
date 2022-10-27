@@ -29,7 +29,7 @@ const Piechartone = () => {
       {apiPieData ? (
         <ResponsiveContainer
           width="100%"
-          className="-translate-x-5 translate-y-2 mb-2"
+          className="-translate-x-1 translate-y-2 mb-2"
           height={230}
         >
           <PieChart>
@@ -43,7 +43,7 @@ const Piechartone = () => {
               paddingAngle={1}
               dataKey="value"
               label
-              fontSize={14}
+              fontSize={12}
               legendType="diamond"
             >
               {data.map((entry, index) => (
@@ -57,6 +57,8 @@ const Piechartone = () => {
           </PieChart>
         </ResponsiveContainer>
       ) : (
+
+        // loader
         <div className="w-full h-[250px] flex justify-center items-center">
           <Oval
             height={60}

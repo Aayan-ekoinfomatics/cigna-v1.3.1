@@ -25,7 +25,7 @@ function index() {
       <div className="absolute top-0 left-0 h-full">
         <Sidebar />
       </div>
-      <div className="w-[85%] ml-auto bg-[#f1f5f9] pb-4">
+      <div className="w-[85%] ml-auto bg-[#f1f5f9] pb-4 pt-4">
         <div className="fixed top-0 z-[999] w-[85%] shadow-md">
           <Header />
         </div>

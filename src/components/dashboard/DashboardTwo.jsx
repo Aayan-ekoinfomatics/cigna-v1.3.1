@@ -21,12 +21,12 @@ const cardData = [
 const DashboardTwo = () => {
 
   return (
-    <div className=''>
+    <div className='pt-2'>
       {/* <div className=' bg-[#c7d2fe] w-[97%] mx-auto my-7 p-7 rounded-lg shadow-md text-left'>
         <h1 className='text-2xl font-bold text-gray-800'>Welcome to your Dashboard,</h1>
         <p className=' text-gray-600'>Here is what's happening with your projects today :</p>
       </div> */}
-      <div className='flex flex-col gap-4 mt-4'>
+      <div className='flex flex-col gap-4'>
         <div className='w-[97%] grid grid-cols-[40%_1fr] gap-4 mx-auto rounded-lg'>
           <Piechartone />
           <div className=' grid grid-cols-3 gap-4 w-full'>
