@@ -1,0 +1,15 @@
+{
+  "message":"successful",
+  "data" : {
+    "data" : {
+      "choice1A": 0.38663,
+      "choice1B":0.2389,
+      "choice1C":0.7982
+   },
+    "graph": {
+      "pv": 200,
+      "uv": 180,
+      "amt": 320
+    }
+  }
+}
