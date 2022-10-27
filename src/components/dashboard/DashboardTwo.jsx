@@ -43,9 +43,9 @@ const DashboardTwo = () => {
           <GraphTwo />
           <GraphFour />
         </div>
-        <div className='grid-cols-1 w-[97%] mx-auto'>
+        {/* <div className='grid-cols-1 w-[97%] mx-auto'>
           <SpreadsheetOne />
-        </div>
+        </div> */}
       </div>
     </div>
   )
