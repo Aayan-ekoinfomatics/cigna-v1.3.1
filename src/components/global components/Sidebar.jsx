@@ -16,7 +16,7 @@ const Sidebar = () => {
     <div className='fixed top-0  w-[15%] bg-[#1e293b] h-full z-[999]'>
       <div className='text-white flex flex-col justify-center items-center mx-auto h-[10%] '>
         <img src={logo} className="w-[120px]" />
-        <div className='h-[1px] w-[35%] bg-white opacity-50 mt-2'></div>
+        {/* <div className='h-[1px] w-[30%] bg-white opacity-50 mt-2'></div> */}
       </div>
       <div className=' mt-[3rem] h-[180px] translate-y-[50%]'>
         <ul className='flex flex-col justify-evenly items-center py-4 h-full text-gray-300'>
