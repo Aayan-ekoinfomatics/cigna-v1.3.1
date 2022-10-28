@@ -24,7 +24,6 @@ const Piechartone = () => {
 
   return (
     <div className="rounded-lg bg-white shadow-md">
-      {/* <p className='text-lg text-gray-600 text-left pt-1 pl-3'>Pie chart discription</p> */}
 
       {apiPieData ? (
         <ResponsiveContainer
@@ -33,8 +32,6 @@ const Piechartone = () => {
           height={230}
         >
           <PieChart>
-            {/* <Pie dataKey="value" data={data} fill="#8884d8" label /> */}
-            {/* <Pie data={data} dataKey="value" cx="50%" cy="50%" outerRadius={55} fill="#d1cff0" /> */}
             <Pie
               data={data}
               innerRadius={45}
@@ -59,6 +56,7 @@ const Piechartone = () => {
       ) : (
 
         // loader
+
         <div className="w-full h-[250px] flex justify-center items-center">
           <Oval
             height={60}

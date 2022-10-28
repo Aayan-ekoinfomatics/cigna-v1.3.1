@@ -43,6 +43,7 @@ const GraphTwo = () => {
             <Legend />
             <Line type="" dataKey="Cumm_conversion" stroke="#FF5733" />
             <Line type="" dataKey="Cumm_Test" stroke="#3398FF" />
+            <Area type='monotone' dataKey='Cumm_conversion' stroke="#3398FF" fill="#FF5733"/>
             <Line type="" dataKey="Cumm_Control" stroke="#F979ED" />
           </ComposedChart>
         </ResponsiveContainer>
