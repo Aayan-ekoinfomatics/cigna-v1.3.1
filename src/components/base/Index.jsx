@@ -9,6 +9,7 @@ import { useRecoilState } from "recoil";
 import axios from "axios";
 
 function index() {
+  
   const baseURL = "http://35.193.222.55:8001/";
 
   const [apiData, setApiData] = useRecoilState(apiDataAtom);

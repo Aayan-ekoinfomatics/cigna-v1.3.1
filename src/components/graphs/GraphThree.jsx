@@ -46,8 +46,8 @@ const GraphThree = () => {
               orientation="left"
               type="number"
             />
-            <Tooltip />
-            <Legend />
+            <Tooltip content={<CustomTooltip />} />
+            <Legend iconSize={10}/>
             <Bar
               dataKey="probability_Test_1"
               barSize={30}
@@ -74,3 +74,20 @@ const GraphThree = () => {
 };
 
 export default GraphThree;
+
+function CustomTooltip({ active, payload, label }) {
+  if (active) {
+    return (
+      <div className="rounded-md border-none bg-[#fafafa] text-[#000000] p-[1rem] shadow-2xl shadow-[#000000]">
+        <p className="text-sm pb-1 font-medium text-center">GraphName</p>
+        {payload?.map((data) => (
+          <div key={Math.random()} className="flex justify-between items-center p-1">
+            <span className="uppercase mr-2 text-[10px]">{data.name}:</span>
+            <span className="text-[10px]">{data.value} </span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  return null;
+}

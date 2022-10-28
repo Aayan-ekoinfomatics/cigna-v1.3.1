@@ -7,6 +7,7 @@ import {
   Cell,
   ResponsiveContainer,
   Legend,
+  Tooltip,
 } from "recharts";
 import { useRecoilState } from "recoil";
 import apiDataAtom from "../../recoil/atoms/apiDataAtom";
@@ -24,7 +25,6 @@ const Piechartone = () => {
 
   return (
     <div className="rounded-lg bg-white shadow-md">
-
       {apiPieData ? (
         <ResponsiveContainer
           width="100%"
@@ -41,7 +41,7 @@ const Piechartone = () => {
               dataKey="value"
               label
               fontSize={12}
-              legendType="diamond"
+              legendType="circle"
             >
               {data.map((entry, index) => (
                 <Cell
@@ -50,13 +50,12 @@ const Piechartone = () => {
                 />
               ))}
             </Pie>
-            <Legend layout="vertical" verticalAlign="middle" align="right" />
+            <Legend layout="vertical" verticalAlign="middle" align="right" iconSize={8}/>
+            <Tooltip content={<CustomTooltip />} />
           </PieChart>
         </ResponsiveContainer>
       ) : (
-
         // loader
-
         <div className="w-full h-[250px] flex justify-center items-center">
           <Oval
             height={60}
@@ -77,3 +76,20 @@ const Piechartone = () => {
 };
 
 export default Piechartone;
+
+function CustomTooltip({ active, payload, label }) {
+  if (active) {
+    return (
+      <div className="rounded-md border-none bg-[#fafafa] text-[#000000] p-[1rem] shadow-2xl shadow-[#000000]">
+        <p className="text-sm pb-1 font-medium text-center">GraphName</p>
+        {payload?.map((data) => (
+          <div key={Math.random()} className="flex justify-between items-center p-1">
+            <span className="uppercase mr-2 text-[10px]">{data.name}:</span>
+            <span className="text-[10px]">{data.value} </span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  return null;
+}
